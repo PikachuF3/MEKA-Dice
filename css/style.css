@@ -1,0 +1,180 @@
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.logo {
+    color: #ff4757;
+    font-size: 4em;
+    font-weight: bold;
+	white-space: nowrap;
+    user-select: none;	
+}
+.logo span {
+  font-size: 1em; /* 字符大小减小到3em */
+  margin-right: -0.25em; /* 字符间隙减小 */
+  font-weight: bold;
+  display: inline-block; /* 使span表现得更像块级元素 */
+}
+.banner {
+  	position: fixed; /* 固定位置 */
+  	top: 0; /* 距离页面顶部0 */
+  	left: 0; /* 距离页面左侧0 */
+  	height: 60px;
+  	width: 100%;
+  	display: flex;
+  	z-index: 3; /* 确保横幅在其他内容之上 */
+}
+
+.color-block {
+    height: 100%;
+    flex: 1; /* 默认情况下，每个色块的宽度相等 */
+}
+  .red { background-color: #df0024; }
+  .yellow { background-color: #f9be09; }
+  .green { background-color: #48c521; }
+  .blue { background-color: #3988ff; }
+
+/* -----------------另一段----------------------- */
+
+.footer {
+	z-index: 8;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    bottom: 0;
+    background: #e6e6e6; /* 暗色背景 */
+    color: #fff; /* 白色文字 */
+    padding: 10px 20px; /* 上下10px，左右20px的内边距 */
+  	user-select: none; /* 标准语法 */
+}
+.footer .left img {
+	padding-left: 20px;
+    height: 50px; /* 图片高度，可根据需要调整 */
+}
+.footer .middle {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    color: #555;
+}
+.footer .middle img {
+    height: 12px; /* 图片高度，可根据需要调整 */
+}
+.footer .middle a {
+ 	text-decoration: none; /* 去除下划线 */
+  	color: black; /* 设置文字颜色为黑色 */
+  	cursor: default; /* 鼠标悬停时不显示手型光标 */
+}
+.footer .right {
+    padding-right: 20px;
+    white-space: nowrap; /* 防止链接换行 */
+}
+.footer .right a {
+ 	text-decoration: none; /* 去除下划线 */
+  	color: black; /* 设置文字颜色为黑色 */
+  	cursor: default; /* 鼠标悬停时不显示手型光标 */
+}
+
+/* -----------------另一段----------------------- */
+
+/* 设置登录框的初始状态，隐藏在视口右侧 */
+.login-modal {
+  	position: fixed;
+  	top: 0;
+  	right: -50vh; /* 假设登录框宽度为300px */
+  	width: 50vh;
+  	height: 100%;
+  	background: #fff;
+  	transition: right 0.5s; /* 平滑过渡动画 */
+}
+
+/* 页面右侧的触发区域 */
+.trigger-area {
+  	position: fixed;
+  	top: 0;
+  	right: 0;
+  	width: 60vh; /* 触发区域的宽度 */
+  	height: 100%;
+  	background: transparent;
+}
+
+/* 鼠标悬停在触发区域时，移动登录框 */
+.trigger-area:hover + .login-modal {
+  	right: 0; /* 展开登录框 */
+}
+
+/* -----------------另一段----------------------- */
+
+/* SVG 图片按钮的样式 */
+#login-trigger {
+  	position: fixed;
+  	top: 20px;
+  	right: 20px;
+  	z-index: 10; /* 确保按钮在最前面 */
+  	background: transparent; /* 设置背景为透明 */
+  	border: none; /* 移除边框 */
+ 	 cursor: pointer; /* 设置鼠标指针样式 */
+}
+#login-trigger svg {
+  	transition: transform 0.5s; 
+}
+/* SVG 图片按钮旋转后的样式 */
+#login-trigger.rotate svg {
+  	transform: rotate(180deg); 
+  	transition: transform 0.5s; 
+}
+/* 登录模态框的基本样式 */
+.login-modal {
+  	position: fixed;
+  	top: 0;
+  	right: -50vh; /* 假设登录框宽度为300px */
+  	width: 50vh;
+  	height: 100%;
+  	background: #f5f4f0 ;
+  	transition: right 0.5s; /* 平滑过渡动画 */
+  	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+form {
+	padding-top: 10vh;
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.acc {
+    outline: none;
+    width: 70%;
+    height: 4rem;
+    font-size: 1.2rem;
+    margin-top: 5rem;
+    border: none;
+    border-bottom:1px solid #8ec5fc ;
+    color: #8ec5fc;
+    background-color: rgba(0,0,0,0);
+}
+.submit {
+    width: 50%;
+    height: 4rem;
+    color: #f6f6f6;
+    background-image: linear-gradient(120deg, #3988ff 0%, #48c521 100%);
+    font-size: 1.4rem;
+    border: none;
+    border-radius: 0.5rem;
+    margin: 6rem 0 0 50%;
+    transform: translateX(-50%);
+}
+.submit:hover {
+    box-shadow: 0 0 2rem -0.5rem rgba(0,0,0,0.35);
+}
+
