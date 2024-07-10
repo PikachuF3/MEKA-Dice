@@ -116,15 +116,15 @@ function generateStyledTable() {//生成一个全新的文本栏显示处理结�
 //        row.style.backgroundColor = index % 2 === 0 ? evenRowColor : oddRowColor; 已弃用
     });
 
-    var card = document.createElement('div');
-    card.className = 'card';
-    card.appendChild(table);
-    container.appendChild(card);
-//    container.appendChild(table);      表格形式生成已弃用
+//    var card = document.createElement('div');        卡片形式生成已弃用
+//    card.className = 'card';           卡片形式生成已弃用
+//    card.appendChild(table);           卡片形式生成已弃用
+//    container.appendChild(card);       卡片形式生成已弃用
+//    container.appendChild(table);      卡片形式生成已弃用
     if (document.body.contains(textArea)) {
         document.body.removeChild(textArea);
     }
-    setTimeout(function(){
+/*    setTimeout(function(){
     var children = document.body.children;
         for (var i = children.length - 1; i >= 0; i--) {
             var child = children[i];
@@ -133,10 +133,12 @@ function generateStyledTable() {//生成一个全新的文本栏显示处理结�
             }
         }
     }, 5000);
+*///                                     删除模块已弃用 
     showTooltip();
- }
+    addData();
+}
 
- function showTooltip() {
+function showTooltip() {
     var tooltip = document.getElementById('tooltip');
     tooltip.classList.add('show');
     
@@ -155,5 +157,12 @@ function showtrips() {
     setTimeout(function() {
         trips.classList.remove('show');
     }, 3000);
+}
+
+function addData() {
+    var container = document.querySelector('.InputData');
+    var newElement = document.createElement('h5');
+    newElement.textContent = '测试人物卡  test test test';
+    container.appendChild(newElement);
 }
 document.getElementById('fileInput').addEventListener('change', handleFileSelect, false);
