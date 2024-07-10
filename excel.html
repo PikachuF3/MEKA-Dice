@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Read and Display Specific Range of Excel Data from Second Worksheet</title>
+    <link href="css/style.css" rel="stylesheet">
+	<link href="img/logo1.png" rel="shortcut icon">
+</head>
+<body>
+    <div class="banner">
+        <div class="color-block red" style="flex:0.25"></div>
+        <div class="color-block yellow" style="flex:0.25"></div>
+        <div class="color-block blue" style="flex:0.5"></div>
+        <div class="color-block green" style="flex:5"></div>
+        <div class="color-block red" style="flex:0.5"></div>
+        <div class="color-block blue" style="flex:0.25"></div>
+        <div class="color-block yellow" style="flex:0.25"></div>
+    </div>
+    <div class="container" style="margin-top: 100px;margin-bottom: 20px;">
+        <div class="textttt">
+        <h2>EXECL 测试</h2>
+        <h4>说明</h4>
+        </div>
+        <div class="inputttt">
+        <label for="fileInput" class="input-file">选择文件</label>
+        <input class="input" type="file" id="fileInput" accept=".xlsx, .xls" />
+        <button class="btn" onclick="generateStyledTable()">表格生成</button>
+        </div>
+    </div> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.3/xlsx.full.min.js"></script>
+    <script src="js/execl.js"></script>
+</body>
+</html>

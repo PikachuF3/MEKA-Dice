@@ -1,0 +1,167 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0px;
+    background-color: #f4f4f4;
+}
+
+.banner {
+    position: fixed; 
+    top: 0; 
+    left: 0; 
+    height: 60px;
+    width: 100%;
+    display: flex;
+    z-index: 3; 
+}
+
+.color-block {
+  height: 100%;
+  flex: 1;
+}
+.red { background-color: #df0024; }
+.yellow { background-color: #f9be09; }
+.green { background-color: #48c521; }
+.blue { background-color: #3988ff; }
+
+/* -----------------另一段----------------------- */
+h2 {
+    text-align: center;
+}
+
+h4 {
+    text-align: left;
+}
+
+.containerBox {  
+    display: flex;  
+    justify-content: space-between; 
+}  
+.container {
+    width: 45vw;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* .container2 {
+    width: 45vw;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+} */     /*已启用*/
+
+.textttt {
+    text-align: center;
+}
+.textttt h4 {
+    text-align: left;
+}
+.inputttt {
+    display: flex;
+    justify-content: space-between;
+}
+
+input[type="file"] {
+    display: none;
+}
+
+.card {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 16px;
+    background-color: #fff;
+    max-width: 100%;
+}
+
+table {
+    margin-top: 10px;
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 8px;
+    text-align: center;
+}
+
+textarea {
+    width: 95%;
+    height: 200px;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.input-file, .btn {
+    display: inline-block;
+    padding: 8px 25px;
+    background-color: #4CAF50;
+    color: #fff;
+    text-decoration: none;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+}
+.input-file:hover, .btn:hover {
+    background-color: #45a049;
+}
+tr:nth-child(even) {
+    background-color: #F0FDFF;
+}
+tr:nth-child(odd) {
+    background-color: #AEE1E9;
+}
+
+.tooltip {
+    position: fixed;
+    bottom: -100px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 281px;
+    max-width: 400px;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    transition: bottom 0.6s ease, opacity 0.7s ease;
+    z-index: 4;
+}
+
+.tooltip.show {
+    bottom: 20px;
+    opacity: 1;
+}
+
+.trips {
+    position: fixed;
+    top:  3px;
+    left: -50%;
+    transform: translateX(-50%);
+    width: 210px;
+    max-width: 400px;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    transition: left 0.6s ease, opacity 0.7s ease;
+    z-index: 4;
+}
+
+.trips.show {
+    left: 170px;
+    opacity: 1;
+}
