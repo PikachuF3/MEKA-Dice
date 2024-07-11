@@ -1,3 +1,5 @@
+var previousData = ""; // 全局变量来存储之前录入的数据
+
 function handleFileSelect(evt) {//读取表格并生成txt
     var files = evt.target.files;
     var reader = new FileReader();

@@ -1,10 +1,28 @@
+/* 
+*页面背景CSS
+*font-family:网页主体字体Arial
+*margin：无外边距
+*padding：我内边距
+*background-color:网页背景为浅灰色
+*/
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0px;
     background-color: #f4f4f4;
 }
-
+/* 
+*页面上方彩条CSS（优先级3）
+*.red 红色 .yellow 黄色 .green 绿色 .blue 蓝色
+*.banner.position:定位类型为固定定位 .banner.top:距上边缘为0 .banner.left:距左边缘为0
+*.banner.height:高度60像素 .banner.height:高度60像素 .banner.display:弹性盒模型
+*.color-block.height:高度100% .color-block.flex:分配0.25 0.5
+*.banner.z-index:优先级3
+*/
+.red { background-color: #df0024; }
+.yellow { background-color: #f9be09; }
+.green { background-color: #48c521; }
+.blue { background-color: #3988ff; }
 .banner {
     position: fixed; 
     top: 0; 
@@ -14,33 +32,25 @@ body {
     display: flex;
     z-index: 3; 
 }
-
 .color-block {
   height: 100%;
   flex: 1;
 }
-.red { background-color: #df0024; }
-.yellow { background-color: #f9be09; }
-.green { background-color: #48c521; }
-.blue { background-color: #3988ff; }
-
-/* -----------------另一段----------------------- */
-h2 {
-    text-align: left;
-}
-
-h3 {
-    text-align: center;
-}
-
-h4 {
-    text-align: left;
-}
-
-h5 {
-    text-align: left;
-    font-size: 16px;
-}
+/* 
+*全局的标题定义
+*二级标题：左对齐
+*三级标题：居中对齐
+*四级标题：左对齐
+*/
+h2 { text-align: left; }
+h3 { text-align: center; }
+h4 { text-align: left; }
+/* 
+*全局的标题定义
+*二级标题：左对齐
+*三级标题：居中对齐
+*四级标题：左对齐
+*/
 
 .containerBox {  
     display: flex;  
@@ -62,13 +72,13 @@ h5 {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 } 
 
-.textttt {
+.text {
     text-align: center;
 }
-.textttt h4 {
+.text h4 {
     text-align: left;
 }
-.inputttt {
+.ReInput {
     display: flex;
     justify-content: space-between;
 }
@@ -130,6 +140,11 @@ tr:nth-child(even) {
 tr:nth-child(odd) {
     background-color: #AEE1E9;
 }
+.InputData h5 {
+    text-align: left;
+    font-size: 16px;
+    cursor: pointer; 
+}
 
 .tooltip {
     position: fixed;
@@ -171,6 +186,6 @@ tr:nth-child(odd) {
 }
 
 .trips.show {
-    left: 1200px;
+    left: 900px;
     opacity: 1;
 }
