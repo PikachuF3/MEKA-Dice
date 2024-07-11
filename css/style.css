@@ -15,7 +15,7 @@ body {
 *页面上方彩条CSS（优先级3）
 *.red 红色 .yellow 黄色 .green 绿色 .blue 蓝色
 *.banner.position:定位类型为固定定位 .banner.top:距上边缘为0 .banner.left:距左边缘为0
-*.banner.height:高度60像素 .banner.height:高度60像素 .banner.display:弹性盒模型
+*.banner.height:高度60像素 .banner.height:高度60像素 .banner.display:弹性
 *.color-block.height:高度100% .color-block.flex:分配0.25 0.5
 *.banner.z-index:优先级3
 */
@@ -46,16 +46,21 @@ h2 { text-align: left; }
 h3 { text-align: center; }
 h4 { text-align: left; }
 /* 
-*全局的标题定义
-*二级标题：左对齐
-*三级标题：居中对齐
-*四级标题：左对齐
+*页面的containerBox定义，其中有container左侧box，container2右侧box
+*.containerBox.display:弹性盒模型
+*.containerBox.justify-content:均匀排列每个元素，首个元素放置于起点，末尾元素放置于终点。
 */
-
 .containerBox {  
     display: flex;  
     justify-content: space-between; 
 }  
+/* 
+*页面的container定义，位于页面的的左侧，小矩形，用于录入人物卡
+*.container.width：30%视窗宽度 .container.background-color：白色 .container.padding：内边距15像素
+*container.border-radius：圆角倒角8像素
+*.container.box-shadow：阴影水平偏移0像素 垂直偏移2像素 模糊半径4像素 背景为黑色 透明度10%
+*关联的html功能和js函数:文件录入input，支持格式xls、xlsx 按钮功能：generateStyledTable() 文件处理功能：handleFileSelect(evt)
+*/
 .container {
     width: 30vw;
     background-color: #ffffff;
@@ -63,7 +68,13 @@ h4 { text-align: left; }
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
-
+/* 
+*页面的container定义，位于页面的的左侧，小矩形，用于录入人物卡
+*.container.width：30%视窗宽度 .container.background-color：白色 .container.padding：内边距15像素
+*container.border-radius：圆角倒角8像素
+*.container.box-shadow：阴影水平偏移0像素 垂直偏移2像素 模糊半径4像素 背景为黑色 透明度10%
+*
+*/
 .container2 {
     width: 45vw;
     background-color: #fff;
@@ -186,6 +197,6 @@ tr:nth-child(odd) {
 }
 
 .trips.show {
-    left: 900px;
+    left: 950px;
     opacity: 1;
 }

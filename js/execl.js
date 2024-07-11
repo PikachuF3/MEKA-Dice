@@ -61,6 +61,7 @@ function displayText(data) { //生成txt文本
     var textData = data.map(row => row.join('\t')).join('\n');
     var textArea = document.createElement('textarea');
     textArea.value = transformData(extractSkillsFromTextarea(textData))
+    previousData = extractSkillsFromTextarea(textData)
     document.body.appendChild(textArea);
 }
 
@@ -165,6 +166,15 @@ function addData() {
     var container = document.querySelector('.InputData');
     var newElement = document.createElement('h5');
     newElement.textContent = '测试人物卡  test test test';
+    newElement.onclick = function() { showTextarea(this); };
     container.appendChild(newElement);
 }
+
+function showTextarea(element) {
+    var textarea = document.createElement('textarea');
+    textarea.style.display = 'block';
+    textarea.value = previousData; // 显示之前录入的数据
+    element.parentNode.insertBefore(textarea, element.nextSibling);
+}
+
 document.getElementById('fileInput').addEventListener('change', handleFileSelect, false);
