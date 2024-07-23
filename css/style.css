@@ -46,6 +46,35 @@ h2 { text-align: left; }
 h3 { text-align: center; }
 h4 { text-align: left; }
 /* 
+*局域的文本text定义
+*二级标题：左对齐
+*四级标题：左对齐
+*/
+.text h2 {
+    text-align: left;
+}
+.text h4 {
+    text-align: left;
+}
+/* 
+*reinput的定义，功能选择人物卡和录入的按钮形状排列规则定义
+*.ReInput.display：弹性
+*.ReInput.justify-content：均匀排列每个元素，首个元素放置于起点，末尾元素放置于终点
+*/
+.ReInput {
+    display: flex;
+    justify-content: space-between;
+}
+/* 
+*input选择文件功能，限制文件xls与xlsx表格文件
+*.Input.display：弹性
+*.Input.justify-content：均匀排列每个元素，首个元素放置于起点，末尾元素放置于终点
+*/
+input[type="file"] {
+    display: none;
+}
+
+/* 
 *页面的containerBox定义，其中有container左侧box，container2右侧box
 *.containerBox.display:弹性盒模型
 *.containerBox.justify-content:均匀排列每个元素，首个元素放置于起点，末尾元素放置于终点。
@@ -59,7 +88,8 @@ h4 { text-align: left; }
 *.container.width：30%视窗宽度 .container.background-color：白色 .container.padding：内边距15像素
 *container.border-radius：圆角倒角8像素
 *.container.box-shadow：阴影水平偏移0像素 垂直偏移2像素 模糊半径4像素 背景为黑色 透明度10%
-*关联的html功能和js函数:文件录入input，支持格式xls、xlsx 按钮功能：generateStyledTable() 文件处理功能：handleFileSelect(evt)
+*关联的html功能:文件录入input，支持格式xls、xlsx 
+*关联的js函数: 按钮功能 generateStyledTable() 文件处理功能 handleFileSelect(evt)
 */
 .container {
     width: 30vw;
@@ -73,7 +103,8 @@ h4 { text-align: left; }
 *.container.width：30%视窗宽度 .container.background-color：白色 .container.padding：内边距15像素
 *container.border-radius：圆角倒角8像素
 *.container.box-shadow：阴影水平偏移0像素 垂直偏移2像素 模糊半径4像素 背景为黑色 透明度10%
-*
+*关联的html功能:无
+*关联的js函数:信息增加功能 addData() 点击显示文本框功能showTextarea(element)
 */
 .container2 {
     width: 45vw;
@@ -82,47 +113,24 @@ h4 { text-align: left; }
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 } 
-
-.text {
-    text-align: center;
-}
-.text h4 {
-    text-align: left;
-}
-.ReInput {
-    display: flex;
-    justify-content: space-between;
-}
-
-input[type="file"] {
-    display: none;
-}
-
-.card {
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    padding: 16px;
-    background-color: #fff;
-    max-width: 100%;
-}
-
-table {
-    margin-top: 10px;
-    width: 100%;
-    border-collapse: collapse;
-    margin-bottom: 20px;
-}
-
-table, th, td {
-    border: 1px solid #ddd;
-}
-
+/* （已经弃用的卡片生成形式）
+*生成卡片的card定义,原位于左侧container下方的表格周围的卡片方框。
+*.card.border：边框为 1 像素宽、实线、颜色浅灰色 .card.border-radius：圆角倒角8像素
+*.card.box-shadow：水平偏移0像素，垂直偏移4像素，模糊半径4像素，阴影黑色，透明度10%
+*.card.padding：内边距16像素 .card.background-color：背景纯白色
+*.card.max-width：最大宽度100%
+*/
 th, td {
     padding: 8px;
     text-align: center;
 }
-
+/* 
+*文本框textarea的定义,点击储存词条后出现的文本框。
+*.card.border：边框为 1 像素宽、实线、颜色浅灰色 .card.border-radius：圆角倒角8像素
+*.card.box-shadow：水平偏移0像素，垂直偏移4像素，模糊半径4像素，阴影黑色，透明度10%
+*.card.padding：内边距16像素 .card.background-color：背景纯白色
+*.card.max-width：最大宽度100%
+*/
 textarea {
     width: 95%;
     height: 200px;
@@ -199,4 +207,37 @@ tr:nth-child(odd) {
 .trips.show {
     left: 950px;
     opacity: 1;
+}
+/* （已经弃用的卡片生成形式）
+*生成卡片的card定义,原位于左侧container下方的表格周围的卡片方框。
+*.card.border：边框为 1 像素宽、实线、颜色浅灰色 .card.border-radius：圆角倒角8像素
+*.card.box-shadow：水平偏移0像素，垂直偏移4像素，模糊半径4像素，阴影黑色，透明度10%
+*.card.padding：内边距16像素 .card.background-color：背景纯白色
+*.card.max-width：最大宽度100%
+*/
+.card {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 16px;
+    background-color: #fff;
+    max-width: 100%;
+}
+/* （已经弃用的表格生成形式）
+*生成表格的table定义，原位于左侧container下方的表格形式。
+*.container.width：30%视窗宽度 .container.background-color：白色 .container.padding：内边距15像素
+*container.border-radius：圆角倒角8像素
+*.container.box-shadow：阴影水平偏移0像素 垂直偏移2像素 模糊半径4像素 背景为黑色 透明度10%
+*关联的html功能:增加表格generateStyledTable()
+*关联的js函数:generateStyledTable()
+*/
+table {
+    margin-top: 10px;
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
 }
